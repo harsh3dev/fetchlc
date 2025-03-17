@@ -8,6 +8,36 @@
 5. The generated JSONs will be used as input for an API to be stored in a database—**consistency and accuracy** are essential.  
 6. The `Testcase JSON` must include the example test cases from the problem description, along with additional test cases to ensure robust coverage.
 7. Do not include `# Solution\n\n` in starting of the solution string
+8. The test cases will never be like 
+  ```bash
+      n = 4, array = [1, 2, 3, 4]
+      n = 3 array = [1, 2, 3]
+
+      or 
+      s = "word", k = 2
+      s = "animal", k = 1
+
+      rather it would be like
+      4
+      1 2 3 4
+      3
+      1 2 3
+
+      and
+
+      word
+      2
+      animal
+      1
+  ```
+9. Each and every testcase will be in simple string format, so that it could be read from the terminal, be it any data structure required as in the problem description the test case will always be in stdin format.
+10. Each defaultCode template for every language will be customised according to the testcase.
+11. The main function of the defaultCode will be customised for reading the input as given in the test case input and to print the output as expected in the testcase
+12. Keep the solution function of the defaultCode empty without filling in the actual solution ,keep it blank for the user to complete it.
+13. if you are given with the main function for any language for the particular problem then use it instead of generating it
+14. Also generate the solution of the problem to fill it in the json
+15. Include some good edge cases in the testcase and the testcase must be of a balanced type consisting of all kinds of cases including easy, medium and edge cases
+
 
 ### Problem JSON Template:
 ```json
@@ -65,7 +95,8 @@
 ---
 
 ### Testcases Template:
-```json{
+```json
+{
   "test_cases": [ // array of test case
     {
       "problem": 2, // problem id
@@ -80,7 +111,8 @@
 ```
 
 ### Example Testcase JSON:
-```json{
+```json
+{
   "test_cases": [
     {
       "problem": 2,
