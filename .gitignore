@@ -1,0 +1,8 @@
+# CSV files
+*.csv
+
+# JSON files
+*.json
+
+# Environment variables
+.env
