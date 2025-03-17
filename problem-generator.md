@@ -37,7 +37,54 @@
 13. if you are given with the main function for any language for the particular problem then use it instead of generating it
 14. Also generate the solution of the problem to fill it in the json
 15. Include some good edge cases in the testcase and the testcase must be of a balanced type consisting of all kinds of cases including easy, medium and edge cases
+16. Add  ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+to the cpp defaultcode for faster execution
+17. make sure the input extraction logic handles the input correctly and the output handles the correct precision for example if the output expects 0.0000 precision then the code must handle it
 
+Example of code in python:
+```py
+from typing import List
+
+def trap(height: List[int]) -> int:
+    # Start your code here
+    pass
+
+# Do not modify the driver code
+if __name__ == "__main__":
+    import sys
+    input = sys.stdin.read().strip().split("\n")
+    height = list(map(int, input[1].split()))
+    result = trap(height)
+    print(result)
+
+```
+
+Example of code in cpp:
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int trap(vector<int>& height) {
+    // Start your code here
+}
+
+// Do not change the driver code
+int main() {
+    int n;
+    cin >> n;
+    vector<int> height(n);
+    for (int i = 0; i < n; i++) {
+        cin >> height[i];
+    }
+    cout << trap(height) << endl;
+    return 0;
+}
+```
+18. Make sure to include all the necessary dependencies
+19. Also provide the defaultCode and testcases in normal format along with the json to test in the code runner
 
 ### Problem JSON Template:
 ```json
